@@ -1,13 +1,13 @@
-package com.dove.spring.cloud.initalizrstart;
+package com.dove.spring.cloud.weather;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class InitalizrStartApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(InitalizrStartApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
