@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
-import com.dove.spring.cloud.weather.service.CityDataServer;
+import com.dove.spring.cloud.weather.service.CityDataService;
 import com.dove.spring.cloud.weather.service.WeatherDataService;
 import com.dove.spring.cloud.weather.vo.City;
 
@@ -27,7 +27,7 @@ public class WeatherDataSyncJob extends QuartzJobBean {
 	private WeatherDataService weatherDataService;
 	
 	@Autowired
-	private CityDataServer cityDataServer; 
+	private CityDataService cityDataServer; 
 	
 	@Override
 	protected void executeInternal(JobExecutionContext arg0) throws JobExecutionException {

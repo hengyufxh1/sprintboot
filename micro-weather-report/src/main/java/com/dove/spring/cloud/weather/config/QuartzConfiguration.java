@@ -19,7 +19,7 @@ import com.dove.spring.cloud.weather.job.WeatherDataSyncJob;
 public class QuartzConfiguration {
 	
 	
-	private static final int TIME = 10; // 更新频率
+	private static final int TIME = 1800; // 更新频率
 
 	/**
 	 * jobDetail 的描述

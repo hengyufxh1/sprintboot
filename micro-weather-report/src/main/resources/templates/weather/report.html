@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<title>weather</title>
+
+</head>
+<body>
+	<div class="container">
+		
+		<div class="row">
+			<h3 th:text="${reportModel.title}">测试</h3>
+			<select class="custom-select" id="selectCityId">
+				<option th:each="city:${reportModel.cityList}"
+					th:value="${city.cityId}" th:text="${city.cityName}"
+					th:selected="${city.cityId eq reportModel.cityId}"></option>
+			</select>
+		</div>
+		<div class="row"><h1 class="text-success" th:text="${reportModel.report.city}">西安</h1></div>
+		<div class="row"><p>当前温度：<span th:text="${reportModel.report.wendu}"></span></p></div>
+		<div class="row"><p>温馨提示：<span th:text="${reportModel.report.ganmao}"></span></p></div>
+		
+		<div class="row">
+			<div class="card border-info" th:each="forecast : ${reportModel.report.forecast}">
+				<div class="card-body text-info">
+					<p class="card-text" th:text="${forecast.date}">日期</p>
+					<p class="card-text" th:text="${forecast.type}">天气类型</p>
+					<p class="card-text" th:text="${forecast.high}">最高温度</p>
+					<p class="card-text" th:text="${forecast.low}">最低温度</p>
+					<p class="card-text" th:text="${forecast.fengxiang}">风向</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script type="text/javascript" th:src="@{/js/jquery-3.3.1.slim.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/weather/report.js}"></script>
+</body>
+</html>
