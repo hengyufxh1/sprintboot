@@ -13,3 +13,5 @@ springboot
 带定时器		micro-weather-quartz
 
 加载到缓存		micro-weather-redis
+
+页面显示		micro-weather-report
