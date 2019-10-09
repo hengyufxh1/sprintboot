@@ -15,3 +15,5 @@ springboot
 加载到缓存		micro-weather-redis
 
 页面显示		micro-weather-report
+
+nohup java -jar /root/spring/jar/micro-weather-report-0.0.1-SNAPSHOT.jar 2>&1 &
